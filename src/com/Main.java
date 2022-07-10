@@ -6,6 +6,27 @@ public class Main {
         return (number > 0);
     }
 
+    static void switchStation(String station) {
+        String stationValue;
+
+        switch(station) {
+            case "Autumn":
+                stationValue = "Autumn";
+                break;
+            case "Spring":
+                stationValue = "Spring";
+                break;
+            case "Summer":
+                stationValue = "Summer";
+                break;
+            case "Winter":
+            default:
+                stationValue = "Snowman";
+                break;
+        }
+        System.out.println(stationValue);
+    }
+
     public static void main(String[] args) {
         System.out.println("1, should be true");
         System.out.println(checkPositive(1));
@@ -34,5 +55,11 @@ public class Main {
             System.out.println(numberFor);
         }
 
+        System.out.println("Switch");
+        switchStation("Autumn");
+        switchStation("Winter");
+        switchStation("Summer");
+        switchStation("Spring");
+        switchStation("S");
     }
 }
